@@ -1,0 +1,19 @@
+<h1>This is child Component!</h1>
+<p>child works!</p>
+ 
+<h1>Welcome {{Username}}</h1>
+<h3>Mobile Number:{{Mobile}}</h3>
+<h3>Join Year:{{Joinyear}}</h3>
+<h3>Users:{{Users}}</h3>
+
+<hr>
+<tr *ngFor="let userlist2 of  exampleArray">
+    <td>User :{{userlist2}}</td>
+</tr>
+<hr>
+<tr *ngFor="let userlist of  Users">
+    <td>User :{{userlist}}</td>
+</tr>
+<button type="button" (click)=" sendMessage()">Send Message</button>
+
+ 

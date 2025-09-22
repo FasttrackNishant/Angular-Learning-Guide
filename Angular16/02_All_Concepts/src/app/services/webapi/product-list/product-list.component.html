@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2 class="text-left">Product List</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.catId }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary mb-3 text-white"> <a routerLink="/product-add" class="text-light">Add New Product</a></button>
+</div>
+x
+<router-outlet></router-outlet>

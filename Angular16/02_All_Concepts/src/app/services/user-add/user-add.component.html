@@ -1,0 +1,51 @@
+<p>user-add works!</p>
+
+<div class="container">
+  <form #userform="ngForm" (ngSubmit)="onSubmit(userform.value)">
+    <div class="form-group">
+      <label for="Id">Id</label>
+      <input type="number" class="form-control" name="Id" ngModel #Id="ngModel" required>
+      <div *ngIf="Id.touched && !Id.valid" class="alert alert-danger">
+        <p *ngIf="Id.hasError('required')">Id is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input type="text" class="form-control" name="firstname" ngModel #firstname="ngModel" required>
+      <div *ngIf="firstname.touched && !firstname.valid" class="alert alert-danger">
+        <p *ngIf="firstname.hasError('required')">First name is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input type="text" class="form-control" name="lastname" ngModel #lastname="ngModel" required>
+      <div *ngIf="lastname.touched && !lastname.valid" class="alert alert-danger">
+        <p *ngIf="lastname.hasError('required')">Last name is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" name="email" ngModel #email="ngModel" required email
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+      <div *ngIf="email.touched && !email.valid" class="alert alert-danger">
+        <p *ngIf="email.hasError('required')">Email is required</p>
+        <p *ngIf="email.hasError('email')">Please enter a valid email</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="profession">Profession</label>
+      <input type="text" class="form-control" name="profession" ngModel #profession="ngModel" required>
+      <div *ngIf="profession.touched && !profession.valid" class="alert alert-danger">
+        <p *ngIf="profession.hasError('required')">Profession is required</p>
+      </div>
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-primary" [disabled]="!userform.valid">Submit</button>
+    </div>
+  </form>
+</div>

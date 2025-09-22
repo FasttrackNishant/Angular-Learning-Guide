@@ -1,0 +1,33 @@
+<p>bottom works!</p>
+
+<div class="container p-3 my-3 bg-primary text-white">
+    <form action="">
+        <div class="form-group">
+                <label for="Search">Search</label>
+                <input type="text" name="filter"[(ngModel)]="search" class="form-control">
+        </div>
+
+        <div class="wrapper">
+            <div class="left">
+                <h4>All Fruits</h4>
+                <div class="fruits">
+                       <div class="fruit" *ngFor="let fruit of fruits">
+                           {{fruit}}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Filtered Fruits</h4>
+                <div class="fruits">
+                        <div class="fruit" *ngFor="let fruit of fruits| filter:search">
+                            {{fruit}}
+                        </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btb btn-dark" (click)="update()">Update</button>
+            </div>
+        </div>
+    </form>
+
+</div>

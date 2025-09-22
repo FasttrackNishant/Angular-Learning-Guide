@@ -1,0 +1,21 @@
+<h1>This is Child Component</h1>
+<hr>
+<h2>Welcome : {{Username}}</h2>
+<h2>Mobile: {{Mobile}}</h2>
+<h2>Age: {{Age}}</h2>
+
+<h2> {{employee}} </h2>
+
+<button type="button" (click)="sendMessage()"> Send Message</button>
+
+<div *ngIf="showEmployees">
+    <h2>Employee List:</h2>
+    <ul>
+        <li *ngFor="let emp of friends">{{ emp }}</li>
+    </ul>
+</div>
+
+
+<label for="newemp"> Add New Employee</label>
+<input type="text" name="newemp" #newemp>
+<button type="button" (click)="AddNewEmp(newemp.value)">Add New</button>

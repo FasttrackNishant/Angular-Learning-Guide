@@ -1,0 +1,23 @@
+<p>one-way-binding works!</p>
+
+{{title}}
+
+<h4>Addition is : {{x+y}}</h4>
+
+Name of Teacher : <input type="text" [value]="name">
+<br>
+Profession : <input type="text" [value]="profession" >
+<br>
+
+Email : <input type="text" [value]="user.email">
+
+<p [style.color]="getBlueColor()">I am in Blue Color</p>
+
+<p>Count is : {{count}}</p>
+
+<button (click)="ClickMe()">Click Me</button>
+
+<button (click)="alertMe()">Alert Me</button>
+
+
+<input type="text">

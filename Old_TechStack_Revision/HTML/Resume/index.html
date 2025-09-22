@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Resume</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 18px;
+            color: gray;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .skills-table, .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .skills-table th, .skills-table td, .education-table th, .education-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .skills-table th, .education-table th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            color: blue;
+            text-decoration: underline;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="./assets/nishant.jpg" alt="Profile picture of Nishant Chatur Patil">
+        <div>
+            <h1>NISHANT CHATUR PATIL</h1>
+            <h2>Trainee Programmer</h2>
+        </div>
+    </div>
+    <div class="content">
+        <p class="section-title">Professional Summary:</p>
+        <ul>
+            <li>Hands on experience <span class="highlight">React</span>, JavaScript with database technologies like MySQL MongoDB.</li>
+            <li>Used tools like Postman, VS Code, Visual Studio for application/product development in operating systems like Windows.</li>
+            <li>Knowledge of version controls and repository management tools like GIT.</li>
+        </ul>
+        <p class="section-title">Skills Snapshot:</p>
+        <table class="skills-table">
+            <tr>
+                <th>Technical Skills</th>
+                <td>C, <span class="highlight">C++</span>, HTML, CSS, JavaScript, React JS, Node JS, Express <span class="incorrect">Js</span>, Mongo <span class="incorrect">dB</span>, Tailwind CSS, Docker, Git, Java</td>
+            </tr>
+            <tr>
+                <th>Functional Skills</th>
+                <td>Communication, <span class="incorrect">TeamWork</span>, Multitasking</td>
+            </tr>
+        </table>
+        <p class="section-title">Education Details:</p>
+        <table class="education-table">
+            <tr>
+                <th>Qualification</th>
+                <th>Educational Institution</th>
+            </tr>
+            <tr>
+                <td>B.Tech CSE</td>
+                <td>JSPM’s <span class="incorrect">Rajarshi Shahu</span> College of Engineering Pune - 9.03</td>
+            </tr>
+            <tr>
+                <td>HSC</td>
+                <td>Pratap College <span class="incorrect">Amalner Dist</span> Jalgaon - 83.38 %</td>
+            </tr>
+            <tr>
+                <td>SCC</td>
+                <td>Sane Guruji <span class="incorrect">Nutan Madhymik</span> Vidyalaya - 93.00 %</td>
+            </tr>
+        </table>
+        <p class="section-title">Detailed Professional Experience:</p>
+        <p>Current Organization: <span class="highlight">INDORE</span>, Yash Technologies <span class="incorrect">Pvt. Ltd.</span> (JUNE 2024– Till date)</p>
+    </div>
+</body>
+</html>

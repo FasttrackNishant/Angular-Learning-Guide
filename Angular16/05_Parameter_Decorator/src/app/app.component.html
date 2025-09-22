@@ -1,0 +1,20 @@
+<h1>This is Parent (root ) Component</h1>
+<hr>
+<h1>{{recivemsg}}</h1>
+
+<hr>
+ 
+  
+  <app-child [Username]="username" [Mobile]="mobile" [Joinyear]="joinyear" [Users]="users" (Messageevent)="rmsg($event)" ></app-child>
+  <form #form="ngForm" (ngSubmit)="addEntryToChildArray(form)">
+    <label for="email">
+     Add Entry
+  </label>
+  <input type="text"
+         class="form-control"
+         name="name"
+         placeholder="Name" required  ngModel/>
+    <button class="btn btn-primary">
+     Push
+  </button>
+  </form>

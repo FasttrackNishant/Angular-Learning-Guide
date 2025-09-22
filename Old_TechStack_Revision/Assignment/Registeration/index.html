@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Details</title>
+   <link rel="stylesheet" href="userstyle.css">
+</head>
+<body>
+   
+    <!-- <div class="container"> -->
+ 
+        <h1>Users Registrasion Form</h1>
+       
+        <form action="">
+           
+            <table style="padding: 3px;">
+                <tr>
+                    <th>
+                        <label for="username">UserName :</label>
+                    </th>
+                    <td>
+                        <input type="text" id="username" name="username" placeholder="Enter Username">
+                    </td>
+                </tr>
+                <tr>
+                <th>
+                    <label for="pass"> Password :</label>
+                </th>
+                <td>
+                    <input type="password" id="pass" name="pass" placeholder="Enter Password">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="role"> Role : </label>
+                </th>
+                <td>
+                    <select name="role" id="role">
+                        <option value="Educator">Educator</option>
+                        <option value="student">Student</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">Email Id : </label>
+                </th>
+                <td>
+                    <input type="text" id="email" name="email" placeholder="Enter Email">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="mobile">Mobile No :</label>
+                </th>
+                <td>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="profileimg">Profile Image : </label>
+                </th>
+                <td>
+                    <input type="file" id="profileimg" name="profileimg" placeholder="Enter Profile Image">
+                </td>
+            </tr>
+            <!-- <tr>
+                <td colspan="5" style="border: 2px; display: flex; justify-content: center; align-items: center; width: 10vw;">
+                    <button type="Submit" onclick="SubmitDetails()" id="SubmitBtn">Submit</button>
+                </td>
+            </tr> -->
+        </table>
+        <button type="button" onclick="SubmitDetails()" id="SubmitBtn" style="border: 2px; display: flex; justify-content: center; align-items: center;">Submit</button>
+       
+    </form>
+   
+<!-- </div> -->
+   
+    <script>
+        function SubmitDetails()
+        {
+            var name = document.getElementById("username").value;
+            var pass = document.getElementById("pass").value;
+            var role = document.getElementById("role").value;
+            var email = document.getElementById("email").value;
+            var mobileno = document.getElementById("mobile").value;
+            var profileimg = document.getElementById("profileimg").value;
+ 
+            const Details = [name,pass,role,email,mobileno, profileimg];
+          //  document.write(name+" "+role+" "+email+" "+mobileno+" "+profilelink);
+            Details.map((item)=>{ document.write(item+" ")});
+            // console.log(profileimg)
+            // document.write(`<img src="D:\Html\image" height=150 width=150/>`)
+        }
+ 
+    </script>
+ 
+</body>
+</html>
+ 

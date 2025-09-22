@@ -1,0 +1,64 @@
+<p>reactive-forms works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <header class="card-header">
+          <a href="" class="float-right btn btn-outline-primary mt-1">New User</a>
+          <h4 class="card-title mt-2">User Registration</h4>
+        </header>
+        <article class="card-body">
+          <form [formGroup]="userForm" (ngSubmit)="submit()">
+            <div class="form-group">
+              <label for="Id">Id</label>
+              <input type="number" class="form-control" readonly formControlName="Id">
+            </div>
+
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input type="text" class="form-control" formControlName="firstname">
+              <div *ngIf="userForm.get('firstname')?.touched && userForm.get('firstname')?.invalid"
+                   class="alert alert-danger mt-1">
+                <div *ngIf="userForm.get('firstname')?.errors?.['required']">First name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" class="form-control" formControlName="lastname">
+              <div *ngIf="userForm.get('lastname')?.touched && userForm.get('lastname')?.invalid"
+                   class="alert alert-danger mt-1">
+                <div *ngIf="userForm.get('lastname')?.errors?.['required']">Last name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" formControlName="email">
+              <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid"
+                   class="alert alert-danger mt-1">
+                <div *ngIf="userForm.get('email')?.errors?.['required']">Email is required</div>
+                <div *ngIf="userForm.get('email')?.errors?.['email']">Please enter a valid email</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="profession">Profession</label>
+              <input type="text" class="form-control" formControlName="profession">
+              <div *ngIf="userForm.get('profession')?.touched && userForm.get('profession')?.invalid"
+                   class="alert alert-danger mt-1">
+                <div *ngIf="userForm.get('profession')?.errors?.['required']">Profession is required</div>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <button type="submit" class="btn btn-primary btn-block"
+                      >Register</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+

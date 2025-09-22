@@ -1,0 +1,6 @@
+<h1>This is Parent (Root) Component</h1>
+<h1>{{message}}</h1>
+<hr>
+<app-child [Username]="username" [Mobile]="mobile" [Age]="age" 
+           [employee]="persons"  (Messageevent)="receiveMsg($event)" (newempevent)="receiveEmpAsPerson($event)"></app-child>
+

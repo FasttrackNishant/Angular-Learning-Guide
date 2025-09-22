@@ -1,0 +1,22 @@
+<app-two-way></app-two-way>
+
+<!-- <app-directives></app-directives>  -->
+
+<app-pass-data></app-pass-data>
+
+<app-parent></app-parent>
+
+<app-child [mydata]="name"> </app-child>
+
+<app-child [myDataArray]="fruits"></app-child>
+<app-child [myObjData]="obj"></app-child>
+
+<button (click)="changeData()">Change Data</button>[myDataArray]="fruits"
+
+<div>
+    -- child to parent data 
+
+    <app-child-2 (childEvent)="msg=$event"> </app-child-2>
+
+    {{msg}}
+</div>
